@@ -20,5 +20,14 @@ def get_data(limit=None):
 
     return X, y
 
+def get_XOR():
+    X = np.zeros((200, 2))
+    X[:50] = np.random.random((50,2)) / 2 + 0.5 # (0.5-1, 0.5-1)
+    X[50:100] = np.random.random((50,2)) / 2 # (0-0.5, 0-0.5)
+    X[100:150] = np.random.random((50,2)) / 2 + np.array([[0, 0.5]]) # (0-0.5, 0.5-1)
+    X[150:] = np.random.random((50, 2)) / 2 + np.array([[0.5, 0]]) # (0.5-1, 0-0.5)
+    y = np.array([0]*100 + [1]*100)
+    return X,y
+
 if __name__ == "__main__":
     get_data()
