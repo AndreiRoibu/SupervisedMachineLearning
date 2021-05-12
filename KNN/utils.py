@@ -29,5 +29,21 @@ def get_XOR():
     y = np.array([0]*100 + [1]*100)
     return X,y
 
+def get_donut():
+    number_of_points = 200
+    inner_R = 5
+    outer_R = 10
+    R1 = np.random.randn(number_of_points//2) + inner_R
+    R2 = np.random.randn(number_of_points//2) + outer_R
+    theta1 = 2 * np.pi * np.random.random(number_of_points//2)
+    theta2 = 2 * np.pi * np.random.random(number_of_points//2)
+    X_inner = np.concatenate( [ [R1 * np.cos(theta1)], [R1*np.sin(theta1)] ] ).T
+    X_outer = np.concatenate( [ [R2 * np.cos(theta2)], [R2*np.sin(theta2)] ] ).T
+
+    X = np.concatenate([ X_inner, X_outer ])
+    y = np.array([0] * (number_of_points//2) + [1] * (number_of_points//2))
+
+    return X, y
+
 if __name__ == "__main__":
     get_data()
