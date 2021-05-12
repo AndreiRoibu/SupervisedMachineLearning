@@ -1,7 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-import sortedcontainers
 sns.set()
 from sortedcontainers import SortedList
 from datetime import datetime
