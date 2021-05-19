@@ -30,7 +30,7 @@ class NaiveBayes(object):
         return np.argmax(P, axis=1)
 
 if __name__ == '__main__':
-    X, Y = get_data(limit=10000)
+    X, Y = get_data()
     N_train = len(Y) // 2
     X_train, Y_train = X[:N_train], Y[:N_train]
     X_test, Y_test = X[N_train:], Y[N_train:]
