@@ -31,7 +31,7 @@ class NaiveBayes(object):
 
 if __name__ == '__main__':
     X, Y = get_data()
-    N_train = len(Y) // 2
+    N_train = len(Y) // 4 * 3
     X_train, Y_train = X[:N_train], Y[:N_train]
     X_test, Y_test = X[N_train:], Y[N_train:]
 
