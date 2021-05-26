@@ -45,5 +45,12 @@ def get_donut():
 
     return X, y
 
+def get_random_perceptron_data():
+    w = np.array([-0.5, 0.5])
+    b = 0.1
+    X = np.random.random((300, 2)) * 2.0 - 1.0
+    y = np.sign(X.dot(w) + b)
+    return X, y
+
 if __name__ == "__main__":
     get_data()
