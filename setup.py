@@ -15,5 +15,7 @@ setup(
         'sklearn',
         'seaborn',
         'sortedcontainers',
+        'tornado',
+        'requests',
     ],
 )
